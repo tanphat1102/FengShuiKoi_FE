@@ -1,16 +1,16 @@
-import React from 'react'
-import AuthenTemplate from '../../components/authen-template'
-import {Button, Form, Input} from 'antd'
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { googleProvider } from '../../config/firebase';
-import {Link, useNavigate} from "react-router-dom";
-import api from '../../config/axios';
-import { toast } from 'react-toastify';
+import React from "react";
+import AuthenTemplate from "../../components/authen-template";
+import { Button, Form, Input } from "antd";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { googleProvider } from "../../config/firebase";
+import { Link, useNavigate } from "react-router-dom";
+import api from "../../config/axios";
+import { toast } from "react-toastify";
 
 function LoginPage() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleLoginGoogle =  () => {
+  const handleLoginGoogle = () => {
     const auth = getAuth();
     signInWithPopup(auth, googleProvider)
       .then((result) => {
@@ -23,7 +23,8 @@ function LoginPage() {
         console.log(user);
         // IdP data available using getAdditionalUserInfo(result)
         // ...
-      }).catch((error) => {
+      })
+      .catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -33,58 +34,69 @@ function LoginPage() {
         const credential = GoogleAuthProvider.credentialFromError(error);
         // ...
       });
-  }
+  };
 
-  const handleLogin = async  (values) => {
-    try{
-      const response = await api.post('login', values);
-      console.log(response)
+  const handleLogin = async (values) => {
+    try {
+      const response = await api.post("login", values);
+      console.log(response);
 
-      const {role, token} =response.data;
-      
+      const { role, token } = response.data;
+
       localStorage.setItem("token", token);
 
-      if(role === 'ADMIN'){
-        navigate("/dashboard");
-      }
-
-    }catch(err){
-      toast.error(err.response.data)
+      // if (role === "ADMIN") {
+      //   navigate("/dashboard");
+      // }
+    } catch (err) {
+      toast.error(err.response.data);
     }
-  }
+  };
 
   return (
     <AuthenTemplate>
       <Form
         labelCol={{
-          span: 24
+          span: 24,
         }}
         onFinish={handleLogin}
+      >
+        <Form.Item
+          label="Phone or Email"
+          name="phone"
+          rules={[
+            {
+              required: true,
+              message: "Please input your username!",
+            },
+          ]}
         >
-        <Form.Item label="Phone or Email" name="phone"
-        rules={[{
-          required: true,
-          message: "Please input your username!"
-        }]}>
-          <Input/>
+          <Input />
         </Form.Item>
 
-        <Form.Item label="Password" name="password"
-        rules={[{
-          required: true,
-          message: "Please input your password!"
-        }]}>
-          <Input.Password/>
+        <Form.Item
+          label="Password"
+          name="password"
+          rules={[
+            {
+              required: true,
+              message: "Please input your password!",
+            },
+          ]}
+        >
+          <Input.Password />
         </Form.Item>
 
         <Link to="/register">Dont have account? Register new account</Link>
 
-        <Button type='primary' htmlType='submit'>Login</Button>
+        <Button type="primary" htmlType="submit">
+          Login
+        </Button>
 
         <Button onClick={handleLoginGoogle}>Login google</Button>
       </Form>
     </AuthenTemplate>
-  )
+  );
 }
 
-export default LoginPage
+export default LoginPage;
