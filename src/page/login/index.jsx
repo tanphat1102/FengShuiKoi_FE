@@ -45,9 +45,9 @@ function LoginPage() {
 
       localStorage.setItem("token", token);
 
-      // if (role === "ADMIN") {
-      //   navigate("/dashboard");
-      // }
+      if (role === "ADMIN") {
+        navigate("/dashboard");
+      }
     } catch (err) {
       toast.error(err.response.data);
     }
