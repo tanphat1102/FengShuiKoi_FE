@@ -1,0 +1,97 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+  width: 400px; /* Chiều rộng cố định */
+  padding: 20px;
+  border: solid 1px;
+  border-color: rgb(163 0 20);
+  box-shadow: rgba(0, 0, 0, 0.5) 1.38px 1.38px 6.89px 0px;
+}
+
+.mua-goi-dang {
+  color: #a30014;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 32px; /* Giảm kích thước chữ */
+  font-weight: 700;
+  text-align: center;
+}
+
+.package-card {
+  position: relative;
+  width: 100%;
+  height: 126px;
+  margin: 15px 0;
+  border-radius: 10px;
+  border: solid gray 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+}
+:hover.package-card {
+  border: solid #a30014 1px;
+  box-shadow: 0 4px 8px rgba(113, 5, 5, 0.557);
+}
+
+#gold.package-card {
+  background: linear-gradient(
+    90deg,
+    rgba(214, 180, 78, 1) 0%,
+    rgba(243, 221, 158, 1) 35%
+  );
+}
+#silver.package-card {
+  background: linear-gradient(
+    90deg,
+    rgba(172, 166, 149, 1) 0%,
+    rgba(242, 239, 229, 1) 35%
+  );
+}
+#copper.package-card {
+  background: linear-gradient(
+    90deg,
+    rgba(214, 150, 78, 1) 0%,
+    rgba(244, 217, 185, 1) 35%
+  );
+}
+
+.package-title {
+  color: #4b361a;
+  display: block;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 400;
+  margin: 5px 10px;
+}
+
+.package-description {
+  color: #000000;
+  display: block;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 14px;
+  margin: 5px 10px;
+}
+
+.package-footer {
+  display: flex;
+  justify-content: end;
+  padding-right: 10px;
+}
+
+.purchase-button {
+  cursor: pointer;
+  background-color: #a30014;
+  border: none;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 0 10px;
+  border-radius: 7px;
+  position: relative;
+  height: 27px;
+  line-height: 20px;
+}
