@@ -28,7 +28,6 @@ export default function Layout({ children }) {
               <li>Blog</li>
             </div>
           </div>
-          <div className="nav-header"></div>
         </div>
       </header>
       <body>
