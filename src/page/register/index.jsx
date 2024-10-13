@@ -11,7 +11,7 @@ function RegisterPage() {
 
   const handleRegister = async (values) => {
     try {
-      values.role = "CUSTOMER";
+      values.role = "MEMBER";
       const response = await api.post("register", values);
       toast.success("Successfully create an account");
       navigate("/login");
@@ -36,6 +36,28 @@ function RegisterPage() {
           rules={[
             { required: true, message: "Please input your username!" },
             { min: 5, message: "Username must be at least 5 characters long." },
+          ]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          label="Email"
+          name="email"
+          rules={[
+            { required: true, message: "Please input your email!" },
+            { type: "email", message: "Please enter a valid email address!" },
+          ]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          label="Phone"
+          name="phone"
+          rules={[
+            { required: true, message: "Please input your phone number!" },
+            { pattern: /^\d{10}$/, message: "Phone number must be 10 digits." },
           ]}
         >
           <Input />
@@ -73,36 +95,6 @@ function RegisterPage() {
           ]}
         >
           <Input.Password />
-        </Form.Item>
-
-        <Form.Item
-          label="Fullname"
-          name="fullname"
-          rules={[{ required: true, message: "Please input your fullname!" }]}
-        >
-          <Input />
-        </Form.Item>
-
-        <Form.Item
-          label="Phone"
-          name="phone"
-          rules={[
-            { required: true, message: "Please input your phone number!" },
-            { pattern: /^\d{10}$/, message: "Phone number must be 10 digits." },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-
-        <Form.Item
-          label="Email"
-          name="email"
-          rules={[
-            { required: true, message: "Please input your email!" },
-            { type: "email", message: "Please enter a valid email address!" },
-          ]}
-        >
-          <Input />
         </Form.Item>
 
         <Link to="/login">Already have account? Login now</Link>
