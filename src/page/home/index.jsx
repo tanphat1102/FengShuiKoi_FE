@@ -13,7 +13,7 @@ function HomePage() {
       <div className="homepage-main-container">
         <div className="homepage-container">
           <div className="left-home">
-            <Tabbled></Tabbled>
+            <Tabbled tab1="a" tab2="b"></Tabbled>
             <TestimonialCarousel></TestimonialCarousel>
           </div>
           <div className="right-home">
