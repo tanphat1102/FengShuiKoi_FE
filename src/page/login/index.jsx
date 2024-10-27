@@ -52,8 +52,8 @@ function LoginPage() {
         <p>Please sign-in to your account and start the adventure</p>
         <Form labelCol={{ span: 24 }} onFinish={handleLogin}>
           <Form.Item
-            label="Phone or Email"
-            name="phone"
+            label="Username"
+            name="username"
             rules={[
               {
                 required: true,
