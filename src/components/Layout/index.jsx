@@ -1,10 +1,8 @@
 import React, { Children } from "react";
 import "./Layout.scss";
 import Logo from "../../assets/logo.jpg";
-import { Link, useNavigate } from "react-router-dom";
 
 export default function Layout({ children }) {
-  const navigate = useNavigate();
   return (
     <>
       <header>
@@ -23,11 +21,11 @@ export default function Layout({ children }) {
           </div>
           <div className="nav-bar">
             <div className="nav-tile">
-              <li onClick={() => navigate("/")}>Trang chủ</li>
+              <li>Trang chủ</li>
               <li>Sản phẩm</li>
-              <li onClick={() => navigate("/tracuumenh")}>Tra cứu mệnh</li>
-              <li onClick={() => navigate("/dangquangcao")}>Đăng quảng cáo</li>
-              <li onClick={() => navigate("/blog")}>Blog</li>
+              <li>Tra cứu mệnh</li>
+              <li>Đăng quảng cáo</li>
+              <li>Blog</li>
             </div>
           </div>
         </div>
@@ -43,23 +41,23 @@ export default function Layout({ children }) {
           </div>
           <div className="footer-category">
             <h5>Danh mục</h5>
-            <li onClick={() => navigate("/")}>Trang chủ</li>
-            <li>Sản phẩm</li>
-            <li onClick={() => navigate("/tracuumenh")}>Tra cứu mệnh</li>
-            <li onClick={() => navigate("/dangquangcao")}>Đăng quảng cáo</li>
-            <li onClick={() => navigate("/blog")}>Blog</li>
+            <p>Trang chủ</p>
+            <p>Sản phẩm</p>
+            <p>Tra cứu mệnh</p>
+            <p>Đăng quảng cáo</p>
+            <p>Blog</p>
           </div>
           <div className="footer-contact">
             <h5>Liên hệ</h5>
-            <div className="footer-contact-row">
+            <div>
               <span class="material-symbols-outlined">call</span>
               <span>0372516026</span>
             </div>
-            <div className="footer-contact-row">
+            <div>
               <span class="material-symbols-outlined">mail</span>
               <span>fengsuikois@gmail.com</span>
             </div>
-            <div className="footer-contact-row">
+            <div>
               <span class="material-symbols-outlined">home</span>
               <span>
                 FengsuiKois Đường D1, phường Long Thạnh Mỹ, TP Thủ Đức
