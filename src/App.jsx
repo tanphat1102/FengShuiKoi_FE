@@ -29,6 +29,8 @@ import ElementResult from "./components/element-result";
 import ResultPage from "./pages/ResultPage";
 import MiniCart from "./components/mini-cart";
 import Cart from "./components/cart";
+import MemberManagement from "./components/management/MemberManagement";
+import ShopPage from "./page/shopPage";
 
 const ProtectRouteAuth = ({ children }) => {
   const user = useSelector((state) => state.user); // Adjust based on your state structure
@@ -40,6 +42,7 @@ const ProtectRouteAuth = ({ children }) => {
 
   return children;
 };
+
 
 function App() {
   const router = createBrowserRouter([
@@ -94,6 +97,13 @@ function App() {
           <Dashboard />
         </ProtectRouteAuth>
       ),
+      path: "/shopPage",
+      element: <ShopPage />,
+    },
+
+    {
+      path: "/dashboard",
+      element: <Dashboard />,
       children: [
         {
           path: "category",
