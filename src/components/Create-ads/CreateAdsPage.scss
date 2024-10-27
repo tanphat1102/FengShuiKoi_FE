@@ -1,0 +1,83 @@
+.create-ads-page-main-container{
+  width: 70vw;
+  margin: 0 auto;
+  h1,h2{
+    text-align: center;
+    color: #a30014;
+  }
+  .create-ads-page-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .right-home{
+      margin-bottom: 20px;
+      margin-left: 20px;
+      .koiads-main-container{
+        margin-bottom: 20px;
+      }
+    }
+    .left-home{
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      .form{
+        width: 600px;
+        padding:0 0 0 20px;
+        border: solid 1px #a30014 ;
+        border-radius: 10px;
+        background-color: #a30014;
+        .create-ads-form-footer{
+          text-align: end;
+          .create-ads-form-submit-button{
+            height: 50px;
+            width: 100px;
+            background: linear-gradient(
+              90deg,
+              rgba(214, 180, 78, 1) 0%,
+              rgba(243, 221, 158, 1) 35%
+    );
+          }
+        }
+      }
+    }
+    
+  }
+  .ads-table{
+    width: 80%;
+    margin: 0 auto;
+    .action-btn{
+      text-align: center;
+      Button {
+        width: 80px;
+        margin: 5px;
+
+      }
+    }
+  }
+  
+  
+}
+.ant-modal{ 
+  top: 10px;
+  .ant-modal-title{
+    color: #a91111;
+  }
+  .ant-modal-content{
+    border: solid 1px #a91111;
+    .ant-form-item-label{
+      label{
+        color: black;
+      }
+    }
+  }
+  .ant-input-outlined{
+    border: solid 1px #a911116e;
+  }
+  
+  .ant-select-selector{
+    .input-search{
+
+      border: solid 1px #a911116e;
+    }
+  }
+}
