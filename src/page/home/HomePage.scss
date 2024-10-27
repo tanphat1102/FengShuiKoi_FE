@@ -1,0 +1,21 @@
+.homepage-main-container{
+  max-width: 80vw;
+  margin: 0 auto;
+  .homepage-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    .right-home{
+      margin-bottom: 20px;
+      margin-left: 20px;
+      .koiads-main-container{
+        margin-bottom: 20px;
+      }
+    }
+    .left-home{
+      display: flex;
+    flex-direction: column;
+    align-items: center; 
+    }
+  }
+}

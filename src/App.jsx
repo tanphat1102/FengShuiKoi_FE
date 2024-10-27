@@ -5,6 +5,7 @@ import RegisterPage from "./page/register";
 import HomePage from "./page/home";
 import Dashboard from "./components/dashboard";
 import MemberManagement from "./components/management/MemberManagement";
+import ShopPage from "./page/shopPage";
 // import Dashboard from "./components/dashboard";
 // import MemberManagement from "./components/management/MemberManagement";
 
@@ -23,6 +24,11 @@ function App() {
     {
       path: "/register",
       element: <RegisterPage />,
+    },
+
+    {
+      path: "/shopPage",
+      element: <ShopPage />,
     },
 
     {
