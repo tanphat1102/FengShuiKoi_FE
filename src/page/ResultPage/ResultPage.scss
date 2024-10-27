@@ -1,0 +1,12 @@
+.element-result-page-main-container{
+  width: 70vw;
+  margin: 0 auto;
+  .element-result-page-upper-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .right-container{
+      margin-left: 50px;
+    }
+  }
+}
