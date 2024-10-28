@@ -1,11 +1,13 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import LoginPage from "./page/login";
-import RegisterPage from "./page/register";
-import HomePage from "./page/home";
+import LoginPage from "./pages/login";
+import RegisterPage from "./pages/register";
+import HomePage from "./pages/home";
 import Dashboard from "./components/dashboard";
 import MemberManagement from "./components/management/MemberManagement";
-import ShopPage from "./page/shopPage";
+import ShopPage from "./pages/shop";
+import Layout from "./components/Layout";
+import CartPage from "./pages/cart";
 // import Dashboard from "./components/dashboard";
 // import MemberManagement from "./components/management/MemberManagement";
 
@@ -27,8 +29,13 @@ function App() {
     },
 
     {
-      path: "/shopPage",
+      path: "/shop",
       element: <ShopPage />,
+    },
+
+    {
+      path: "/cart",
+      element: <CartPage />,
     },
 
     {

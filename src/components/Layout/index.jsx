@@ -1,8 +1,13 @@
 import React, { Children } from "react";
 import "./Layout.scss";
 import Logo from "../../assets/logo.jpg";
+import { useSelector } from "react-redux";
+import { Badge } from "antd";
+import { Link } from "react-router-dom";
 
 export default function Layout({ children }) {
+  const cart = useSelector((store) => store.cart)
+
   return (
     <>
       <header>
@@ -17,7 +22,11 @@ export default function Layout({ children }) {
               <p>Fengsui Kois</p>
             </div>
             <a>Đăng nhập</a>
-            <span class="material-symbols-outlined">shopping_cart</span>
+            <Link to='/cart'>
+              <Badge count={cart.length}>
+                <span class="material-symbols-outlined">shopping_cart</span>
+              </Badge>
+            </Link>
           </div>
           <div className="nav-bar">
             <div className="nav-tile">
