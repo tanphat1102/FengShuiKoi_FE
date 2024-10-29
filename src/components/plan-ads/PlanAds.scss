@@ -6,10 +6,11 @@
 }
 
 .main-container {
-  width: 400px; /* Chiều rộng cố định */
+  margin-top: 20px;
+  width: 400px;
+  border-radius: 12px;
   padding: 20px;
-  border: solid 1px;
-  border-color: rgb(163 0 20);
+  border: solid 1px rgb(163 0 20);
   box-shadow: rgba(0, 0, 0, 0.5) 1.38px 1.38px 6.89px 0px;
 }
 

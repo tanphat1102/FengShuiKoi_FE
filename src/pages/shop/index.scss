@@ -1,0 +1,86 @@
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); // 5 products per row
+    grid-gap: 30px; // Spacing between cards
+    padding: 20px 50px; // Padding from the page borders
+    justify-content: center; // Center-align the grid content
+  }
+  
+  .product {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+  
+    max-width: 280px; // Set a wider maximum width for the cards
+    margin: 0 auto; // Center each product in its grid cell
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+  
+    img {
+      width: 100%; 
+      height: auto;
+      max-height: 200px; // Adjusted image height to fit the wider card
+      object-fit: cover;
+    }
+  
+    h3 {
+      font-size: 1.2rem; // Adjust font size for slightly wider cards
+      margin: 10px 0;
+      color: #333;
+    }
+  
+    span {
+      display: block;
+      font-size: 1.1rem;
+      color: #ff4d4f;
+      margin-bottom: 10px;
+    }
+  
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #1890ff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+  
+      &:hover {
+        background-color: #40a9ff;
+      }
+    }
+  }
+  
+  // Responsive styling for smaller screens
+  @media (max-width: 1200px) {
+    .product-list {
+      grid-template-columns: repeat(4, 1fr); // 4 products per row for medium screens
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .product-list {
+      grid-template-columns: repeat(3, 1fr); // 3 products per row for tablet screens
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-list {
+      grid-template-columns: repeat(2, 1fr); // 2 products per row for smaller tablets
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .product-list {
+      grid-template-columns: 1fr; // 1 product per row for mobile devices
+    }
+  }
+  
