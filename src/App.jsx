@@ -31,6 +31,10 @@ import ResultPage from "./pages/ResultPage";
 import MiniCart from "./components/mini-cart";
 import Cart from "./components/cart";
 import MemberManagement from "./components/management/MemberManagement";
+import ShopPage from "./pages/shop";
+import Layout from "./components/Layout";
+import CartPage from "./pages/cart";
+
 import ShopPage from "./page/shopPage";
 
 const ProtectRouteAuth = ({ children }) => {
