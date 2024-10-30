@@ -1,0 +1,68 @@
+// Main container styling
+.cart-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  // Button styles
+  .cart-button {
+    margin: 10px 0;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+  
+    &.clear {
+      background-color: #ff4d4f;
+      color: #fff;
+      border: none;
+  
+      &:hover {
+        background-color: #d9363e;
+      }
+    }
+  
+    &.buy {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+  
+      &:hover {
+        background-color: #45a049;
+      }
+    }
+  }
+  
+  // Table styles
+  .cart-table {
+    margin-top: 20px;
+  
+    .ant-table {
+      background-color: #ffffff;
+      border-radius: 8px;
+  
+      .ant-table-thead > tr > th {
+        background-color: #fafafa;
+        font-weight: bold;
+        text-align: center;
+      }
+  
+      .ant-table-tbody > tr > td {
+        text-align: center;
+        vertical-align: middle;
+  
+        // Specific styling for the image column
+        &:nth-child(1) {
+          width: 200px;
+        }
+      }
+    }
+  }
+  
+  // Image styling
+  .cart-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
