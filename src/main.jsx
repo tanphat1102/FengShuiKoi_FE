@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
+<<<<<<< HEAD
 import "./index.css";
 import StudentManagement from "./StudentManagement.jsx";
 import "react-toastify/dist/ReactToastify.css";
@@ -21,5 +22,12 @@ createRoot(document.getElementById("root")).render(
         </PersistGate>
       </Provider>
     </ConfigProvider>
+=======
+
+createRoot(document.getElementById("root")).render(
+  <>
+    <App />
+    <ToastContainer />
+>>>>>>> parent of 5b2df8c (upadte cartpage)
   </>
 );

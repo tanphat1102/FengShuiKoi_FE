@@ -1,10 +1,15 @@
 import React, { Children } from "react";
 import "./Layout.scss";
 import Logo from "../../assets/logo.jpg";
+<<<<<<< HEAD
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Layout({ children }) {
   const navigate = useNavigate();
+=======
+
+export default function Layout({ children }) {
+>>>>>>> parent of 5b2df8c (upadte cartpage)
   return (
     <>
       <header>

@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import {
   Navigate,
   RouterProvider,
@@ -7,6 +8,12 @@ import {
 import LoginPage from "./pages/login";
 import RegisterPage from "./pages/register";
 import HomePage from "./pages/home";
+=======
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import LoginPage from "./page/login";
+import RegisterPage from "./page/register";
+import HomePage from "./page/home";
+>>>>>>> parent of 5b2df8c (upadte cartpage)
 import Dashboard from "./components/dashboard";
 import ManageCategory from "./pages/admin/manage-category";
 import ManageStore from "./pages/admin/manage-store";
@@ -31,6 +38,7 @@ import MiniCart from "./components/mini-cart";
 import Cart from "./components/cart";
 import MemberManagement from "./components/management/MemberManagement";
 import ShopPage from "./page/shopPage";
+<<<<<<< HEAD
 
 const ProtectRouteAuth = ({ children }) => {
   const user = useSelector((state) => state.user); // Adjust based on your state structure
@@ -43,6 +51,10 @@ const ProtectRouteAuth = ({ children }) => {
   return children;
 };
 
+=======
+// import Dashboard from "./components/dashboard";
+// import MemberManagement from "./components/management/MemberManagement";
+>>>>>>> parent of 5b2df8c (upadte cartpage)
 
 function App() {
   const router = createBrowserRouter([
@@ -59,10 +71,16 @@ function App() {
       element: <RegisterPage />,
     },
     {
+<<<<<<< HEAD
       path: "test",
       element: <MiniCart />,
+=======
+      path: "/shopPage",
+      element: <ShopPage />,
+>>>>>>> parent of 5b2df8c (upadte cartpage)
     },
     {
+<<<<<<< HEAD
       path: "test1",
       element: <Cart />,
     },
@@ -102,6 +120,8 @@ function App() {
     },
 
     {
+=======
+>>>>>>> parent of 5b2df8c (upadte cartpage)
       path: "/dashboard",
       element: <Dashboard />,
       children: [
