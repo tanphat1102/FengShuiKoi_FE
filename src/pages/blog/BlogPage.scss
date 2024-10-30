@@ -1,0 +1,28 @@
+
+  .blog-main-container {
+    width: 70vw;
+    border: none;
+    padding: 0 15px; /* Combined padding */
+    margin: 10px auto; /* Centering */
+    .title {
+      display: block;
+      position: relative;
+      color: #a91111;
+      font-size: 32px;
+      font-weight: 700;
+      padding: 10px;
+      text-align: center;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      .row-list {
+        justify-content: space-around;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }

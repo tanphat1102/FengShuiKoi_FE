@@ -81,8 +81,24 @@ footer{
     }
   
   }
-  .footer-category{}
-  .footer-contact{}
+  .footer-contact-row{
+    display: flex;
+    align-items: center;
+  }
+  .footer-category{
+    li{
+      list-style: none;
+      &:hover {
+        cursor: pointer;
+        color: white;
+        text-decoration: underline;
+        text-shadow: 0px 0px 30px white;
+      }
+    }
+  }
+
+  .footer-contact{
+  }
 }
 .copyright{
 text-align: center;
