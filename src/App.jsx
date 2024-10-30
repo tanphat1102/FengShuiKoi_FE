@@ -10,6 +10,7 @@ import Layout from "./components/Layout";
 import CartPage from "./pages/cart";
 // import Dashboard from "./components/dashboard";
 // import MemberManagement from "./components/management/MemberManagement";
+// fix
 
 function App() {
   const router = createBrowserRouter([
