@@ -62,7 +62,7 @@ const ShopItemCard = ({ items }) => (
 
 function ShopItems() {
   return (
-    <div>
+    <div className='shopItem'>
         <div className="flexRowA">
             {shopItems.map((items) => (
                 <ShopItemCard key={items.id} items={items} />

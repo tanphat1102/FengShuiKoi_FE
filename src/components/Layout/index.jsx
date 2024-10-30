@@ -4,7 +4,7 @@ import Logo from "../../assets/logo.jpg";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Layout({ children }) {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   return (
     <>
       <header>
@@ -24,7 +24,7 @@ export default function Layout({ children }) {
           <div className="nav-bar">
             <div className="nav-tile">
               <li onClick={() => navigate("/")}>Trang chủ</li>
-              <li>Sản phẩm</li>
+              <li onClick={() => navigate("/shopPage")}>Sản phẩm</li>
               <li onClick={() => navigate("/tracuumenh")}>Tra cứu mệnh</li>
               <li onClick={() => navigate("/dangquangcao")}>Đăng quảng cáo</li>
               <li onClick={() => navigate("/blog")}>Blog</li>
@@ -44,7 +44,7 @@ export default function Layout({ children }) {
           <div className="footer-category">
             <h5>Danh mục</h5>
             <li onClick={() => navigate("/")}>Trang chủ</li>
-            <li>Sản phẩm</li>
+            <li onClick={() => navigate("/shopPage")}>Sản phẩm</li>
             <li onClick={() => navigate("/tracuumenh")}>Tra cứu mệnh</li>
             <li onClick={() => navigate("/dangquangcao")}>Đăng quảng cáo</li>
             <li onClick={() => navigate("/blog")}>Blog</li>

@@ -6,12 +6,15 @@
   }
   
   // Main container for the shop items
-  .flexRowA {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 70px; // Space between items
-    padding: 20px; // Padding around the container
+  .shopItem{
+
+    .flexRowA {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 70px; // Space between items
+      padding: 20px; // Padding around the container
+    }
   }
   
   // Individual product card styling

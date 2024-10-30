@@ -7,35 +7,21 @@ import {
 import LoginPage from "./pages/login";
 import RegisterPage from "./pages/register";
 import HomePage from "./pages/home";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./components/dashboard";
 import ManageCategory from "./pages/admin/manage-category";
 import ManageStore from "./pages/admin/manage-store";
 import ManageServiceGroup from "./pages/admin/manage-store-group";
-import TestPage from "./pages/test";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import TestimonialCarousel from "./components/testimonial-slider";
 import PlanAds from "./components/plan-ads";
-import PackageCard from "./components/kois-ads";
-import KoisAds from "./components/kois-ads";
-import BlogList from "./components/blogList";
-import Tabbed from "./components/Tabbed-template";
 import KoisRecommend from "./components/KoisRecommend";
-import Header from "./components/Layout";
-import Layout from "antd/es/layout/layout";
 import CreateAdsPage from "./pages/Create-ads";
 import BlogPage from "./pages/blog";
-import ElementResult from "./components/element-result";
 import ResultPage from "./pages/ResultPage";
 import MiniCart from "./components/mini-cart";
 import Cart from "./components/cart";
-import MemberManagement from "./components/management/MemberManagement";
-import ShopPage from "./pages/shop";
-import Layout from "./components/Layout";
-import CartPage from "./pages/cart";
-
-import ShopPage from "./page/shopPage";
+import ShopPage from "./pages/shopPage";
 
 const ProtectRouteAuth = ({ children }) => {
   const user = useSelector((state) => state.user); // Adjust based on your state structure
