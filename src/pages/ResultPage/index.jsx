@@ -14,16 +14,16 @@ function ResultPage() {
         <div className="element-result-page-main-container">
           <div className="element-result-page-upper-container">
             <div className="left-container">
-              <Tabbled></Tabbled>
-              <ElementResult></ElementResult>
+              <Tabbled />
+              <ElementResult />
             </div>
             <div className="right-container">
-              <KoisAds></KoisAds>
-              <PlanAds></PlanAds>
+              <KoisAds />
+              <PlanAds />
             </div>
           </div>
           <div>
-            <KoisRecommend></KoisRecommend>
+            <KoisRecommend />
           </div>
         </div>
       </Layout>
