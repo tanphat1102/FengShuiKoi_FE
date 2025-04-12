@@ -1,26 +1,29 @@
-import React, { Children } from "react";
+import React from "react";
 import "./Layout.scss";
 import Logo from "../../assets/logo.jpg";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { MdSearch, MdShoppingCart, MdCall, MdEmail, MdHome } from "react-icons/md";
 
 export default function Layout({ children }) {
   const navigate = useNavigate();
+
   return (
     <>
       <header>
         <div className="header-main-container">
           <div className="upper-header">
             <div className="search-bar">
-              <input></input>
-              <span class="material-symbols-outlined">search</span>
+              <input placeholder="Tìm kiếm..." />
+              <MdSearch size={28} className="icon" />
             </div>
             <div className="header-logo">
-              <img src={Logo} alt="logo" width="30px" height="30px"></img>
+              <img src={Logo} alt="logo" width="30px" height="30px" />
               <p>Fengsui Kois</p>
             </div>
-            <a>Đăng nhập</a>
-            <span class="material-symbols-outlined">shopping_cart</span>
+            <a href="#">Đăng nhập</a>
+            <MdShoppingCart size={28} className="icon" />
           </div>
+
           <div className="nav-bar">
             <div className="nav-tile">
               <li onClick={() => navigate("/")}>Trang chủ</li>
@@ -32,15 +35,18 @@ export default function Layout({ children }) {
           </div>
         </div>
       </header>
-      <body>
+
+      <main>
         <div>{children}</div>
-      </body>
+      </main>
+
       <footer>
         <div className="footer-container">
           <div className="footer-logo">
-            <img src={Logo} alt="logo" width="30px" height="30px"></img>
+            <img src={Logo} alt="logo" width="30px" height="30px" />
             <p>Fengsui Kois</p>
           </div>
+
           <div className="footer-category">
             <h5>Danh mục</h5>
             <li onClick={() => navigate("/")}>Trang chủ</li>
@@ -49,26 +55,25 @@ export default function Layout({ children }) {
             <li onClick={() => navigate("/dangquangcao")}>Đăng quảng cáo</li>
             <li onClick={() => navigate("/blog")}>Blog</li>
           </div>
+
           <div className="footer-contact">
             <h5>Liên hệ</h5>
             <div className="footer-contact-row">
-              <span class="material-symbols-outlined">call</span>
+              <MdCall className="icon" />
               <span>0372516026</span>
             </div>
             <div className="footer-contact-row">
-              <span class="material-symbols-outlined">mail</span>
+              <MdEmail className="icon" />
               <span>fengsuikois@gmail.com</span>
             </div>
             <div className="footer-contact-row">
-              <span class="material-symbols-outlined">home</span>
-              <span>
-                FengsuiKois Đường D1, phường Long Thạnh Mỹ, TP Thủ Đức
-              </span>
+              <MdHome className="icon" />
+              <span>FengsuiKois Đường D1, phường Long Thạnh Mỹ, TP Thủ Đức</span>
             </div>
           </div>
         </div>
         <div className="copyright">
-          <small> © 2024 Copyright FengsuiKois</small>
+          <small>© 2024 Copyright FengsuiKois</small>
         </div>
       </footer>
     </>

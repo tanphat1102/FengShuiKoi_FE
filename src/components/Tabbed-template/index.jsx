@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { setElementData } from "../../redux/features/elementSlice"; // Make sure this path is correct
 import "./Tabbed.scss";
-import { useDispatch } from "react-redux";
 import api from "../../config/axios";
 import DynamicInputFields from "../DynamicInputFields";
 
@@ -12,7 +10,6 @@ const Tabbed = () => {
   const [tankShape, setTankShape] = useState("");
   const [errors, setErrors] = useState({});
   const [result, setResult] = useState(null);
-  const dispatch = useDispatch();
 
   const handleDateChange = (e) => {
     const dateValue = e.target.value;

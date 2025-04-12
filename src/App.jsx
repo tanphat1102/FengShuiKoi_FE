@@ -11,7 +11,6 @@ import Dashboard from "./components/dashboard";
 import ManageCategory from "./pages/admin/manage-category";
 import ManageStore from "./pages/admin/manage-store";
 import ManageServiceGroup from "./pages/admin/manage-store-group";
-import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import TestimonialCarousel from "./components/testimonial-slider";
 import PlanAds from "./components/plan-ads";
