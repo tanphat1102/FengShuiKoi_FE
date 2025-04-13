@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  Navigate,
-  RouterProvider,
-  createBrowserRouter,
-} from "react-router-dom";
+import { Navigate, RouterProvider, createHashRouter } from "react-router-dom";
 import LoginPage from "./pages/login";
 import RegisterPage from "./pages/register";
 import HomePage from "./pages/home";
@@ -34,7 +30,7 @@ const ProtectRouteAuth = ({ children }) => {
 };
 
 function App() {
-  const router = createBrowserRouter([
+  const router = createHashRouter   ([
     {
       path: "",
       element: <HomePage />,
