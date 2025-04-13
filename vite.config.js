@@ -4,6 +4,9 @@ import { ghPages } from "vite-plugin-gh-pages";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/FengShuiKoi_FE/",
-  plugins: [react(), ghPages()],
+  plugins: [react()],
+  server: {
+    port: 7979,
+    open: true, 
+  }
 });
