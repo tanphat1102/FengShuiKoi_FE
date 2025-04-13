@@ -92,8 +92,6 @@ function App() {
     },
 
     {
-      path: "/dashboard",
-      element: <Dashboard />,
       children: [
         {
           path: "category",
