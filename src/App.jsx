@@ -52,7 +52,6 @@ function App() {
       element: <MiniCart />,
     },
     {
-
       path: "test1",
       element: <Cart />,
     },
@@ -87,10 +86,11 @@ function App() {
           <Dashboard />
         </ProtectRouteAuth>
       ),
+    },
+    {
       path: "/shopPage",
       element: <ShopPage />,
     },
-
     {
       children: [
         {
