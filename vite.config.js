@@ -5,5 +5,6 @@ import { ghPages } from "vite-plugin-gh-pages";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/FengShuiKoi_FE/",
+  //base: "/FengShuiKoi_FE/",
+  base: "./",
 });
